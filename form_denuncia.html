@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de denúncia</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <!-- Hero Section -->
+      <section class="form-hero">
+        <div class="container">
+          <h1>Registre sua denúncia</h1>
+          <p>
+            Nosso time especializado está pronto para orientá-lo e ajudá-lo a
+            tomar as medidas necessárias
+          </p>
+        </div>
+      </section>
+
+      <!-- Form Section -->
+      <section class="form-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="form-container">
+                <div class="form-header">
+                  <h2>Formulário de Denúncia</h2>
+                </div>
+                <div class="form-body">
+                  <div class="info-alert">
+                    <h5>📋 Antes de preencher</h5>
+                    <p class="mb-0">
+                      Tenha em mãos todas as informações sobre o ocorrido,
+                      incluindo datas, valores envolvidos, prints de conversas e
+                      quaisquer outras evidências que possam nos ajudar a
+                      entender sua situação.
+                    </p>
+                  </div>
+
+                  <form action="processa.php" method="post">
+                    <!-- Seção 1: Dados da Ocorrência -->
+                    <div class="mb-4">
+                      <h3 class="section-title">Dados da ocorrência</h3>
+
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label for="servico" class="form-label"
+                            >Serviço digital utilizado *</label
+                          >
+                          <select
+                            name="servico"
+                            id="servico"
+                            class="form-control form-control-custom"
+                            required
+                          >
+                            <option value="">Selecione o serviço...</option>
+                            <option value="whatsApp">WhatsApp</option>
+                            <option value="Telegran">Telegram</option>
+                            <option value="Email">Email</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="Aplicativo de banco">
+                              Aplicativo de banco
+                            </option>
+                            <option value="Outros">Outros</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label for="data_ocorrencia" class="form-label"
+                            >Data da ocorrência *</label
+                          >
+                          <input
+                            type="date"
+                            id="data_ocorrencia"
+                            name="data_ocorrencia"
+                            class="form-control form-control-custom"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label class="form-label"
+                          >Tipo de crime sofrido *</label
+                        >
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-check mb-2">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                id="dados"
+                                name="opcao"
+                                value="dados"
+                                required
+                              />
+                              <label class="form-check-label" for="dados"
+                                >Roubo de dados</label
+                              >
+                            </div>
+                            <div class="form-check mb-2">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                id="plagio"
+                                name="opcao"
+                                value="plagio"
+                              />
+                              <label class="form-check-label" for="plagio"
+                                >Plágio</label
+                              >
+                            </div>
+                            <div class="form-check mb-2">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                id="financeiro"
+                                name="opcao"
+                                value="financeiro"
+                              />
+                              <label class="form-check-label" for="financeiro"
+                                >Subtração de valores</label
+                              >
+                            </div>
+                            <div class="form-check mb-2">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                id="identidade"
+                                name="opcao"
+                                value="identidade"
+                              />
+                              <label class="form-check-label" for="identidade"
+                                >Roubo de identidade</label
+                              >
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-check mb-2">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                id="chantagem"
+                                name="opcao"
+                                value="chantagem"
+                              />
+                              <label class="form-check-label" for="chantagem"
+                                >Chantagem</label
+                              >
+                            </div>
+                            <div class="form-check mb-2">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                id="fake"
+                                name="opcao"
+                                value="fake"
+                              />
+                              <label class="form-check-label" for="fake"
+                                >DeepFake</label
+                              >
+                            </div>
+                            <div class="form-check mb-2">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                id="fakeNews"
+                                name="opcao"
+                                value="fake News"
+                              />
+                              <label class="form-check-label" for="fakeNews"
+                                >Fake News</label
+                              >
+                            </div>
+                            <div class="form-check mb-2">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                id="boolen"
+                                name="opcao"
+                                value="boolen"
+                              />
+                              <label class="form-check-label" for="boolen"
+                                >Cyber bullying</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="prejuizo" class="form-label"
+                          >Impacto da ocorrência (0-100)</label
+                        >
+                        <div class="range-container">
+                          <input
+                            type="range"
+                            id="prejuizo"
+                            min="0"
+                            max="100"
+                            value="0"
+                            class="form-range"
+                          />
+                          <span id="valorPrejuizo" class="range-value">0</span>
+                        </div>
+                        <div class="range-labels">
+                          <span>Nenhum impacto</span>
+                          <span>Impacto máximo</span>
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label class="form-label"
+                          >Foi realizado boletim de ocorrência policial?
+                          *</label
+                        >
+                        <div class="d-flex gap-4">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              id="sim"
+                              name="boletim"
+                              value="sim"
+                              required
+                            />
+                            <label class="form-check-label" for="sim"
+                              >Sim</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              id="nao"
+                              name="boletim"
+                              value="não"
+                            />
+                            <label class="form-check-label" for="nao"
+                              >Não</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Seção 2: Dados Pessoais -->
+                    <div class="address-section">
+                      <h3 class="section-title">Dados para Contato</h3>
+
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label for="rua" class="form-label">Rua</label>
+                          <input
+                            type="text"
+                            id="rua"
+                            name="rua"
+                            class="form-control form-control-custom"
+                            placeholder="Nome da rua"
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label for="numero" class="form-label">Número</label>
+                          <input
+                            type="number"
+                            id="numero"
+                            name="numero"
+                            class="form-control form-control-custom"
+                            placeholder="Número"
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label for="bairro" class="form-label">Bairro</label>
+                          <input
+                            type="text"
+                            id="bairro"
+                            name="bairro"
+                            class="form-control form-control-custom"
+                            placeholder="Bairro"
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label for="cidade" class="form-label">Cidade</label>
+                          <input
+                            type="text"
+                            id="cidade"
+                            name="cidade"
+                            class="form-control form-control-custom"
+                            placeholder="Cidade"
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label for="estado" class="form-label"
+                            >Estado *</label
+                          >
+                          <select
+                            id="estado"
+                            name="estado"
+                            class="form-control form-control-custom"
+                            required
+                          >
+                            <option value="">Selecione o estado...</option>
+                            <option value="pe">Pernambuco (PE)</option>
+                            <option value="pb">Paraíba (PB)</option>
+                            <option value="rn">Rio Grande do Norte (RN)</option>
+                            <option value="ba">Bahia (BA)</option>
+                            <option value="ce">Ceará (CE)</option>
+                            <option value="al">Alagoas (AL)</option>
+                            <option value="se">Sergipe (SE)</option>
+                            <option value="ma">Maranhão (MA)</option>
+                            <option value="pi">Piauí (PI)</option>
+                            <option value="rj">Rio de Janeiro (RJ)</option>
+                            <option value="sp">São Paulo (SP)</option>
+                            <option value="mg">Minas Gerais (MG)</option>
+                            <option value="rs">Rio Grande do Sul (RS)</option>
+                            <option value="pr">Paraná (PR)</option>
+                            <option value="sc">Santa Catarina (SC)</option>
+                            <option value="outro">Outro Estado</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label for="telefone" class="form-label"
+                            >Telefone *</label
+                          >
+                          <input
+                            type="text"
+                            id="telefone"
+                            name="telefone"
+                            class="form-control form-control-custom"
+                            required
+                            placeholder="(00) 00000-0000"
+                          />
+                        </div>
+                        <div class="col-12 mb-3">
+                          <label for="email" class="form-label">Email *</label>
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="form-control form-control-custom"
+                            required
+                            placeholder="seu.email@exemplo.com"
+                          />
+                        </div>
+                        <div class="col-12">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="enderecoValido"
+                              name="enderecoValido"
+                              value="sim"
+                            />
+                            <label class="form-check-label" for="enderecoValido"
+                              >Confirmo que os dados de endereço estão válidos
+                              para contato</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Seção 3: Relato -->
+                    <div class="mb-4">
+                      <h3 class="section-title">
+                        Relato detalhado da ocorrência
+                      </h3>
+                      <label for="relato" class="form-label"
+                        >Descreva com detalhes o que aconteceu *</label
+                      >
+                      <textarea
+                        name="comentarios"
+                        id="relato"
+                        rows="6"
+                        class="form-control form-control-custom"
+                        required
+                        placeholder="Inclua datas, valores, pessoas envolvidas, sequência de eventos e qualquer outra informação relevante..."
+                      ></textarea>
+                      <div class="form-text">
+                        Quanto mais detalhes você fornecer, melhor poderemos
+                        ajudá-lo.
+                      </div>
+                    </div>
+                    <!-- Botões do formulário - Layout responsivo -->
+                    <div class="row justify-content-end">
+                      <div class="col-12 col-sm-auto mb-2 mb-sm-0">
+                        <input
+                          type="reset"
+                          value="LIMPAR FORMULÁRIO"
+                          class="btn-reset w-100"
+                          style="white-space: nowrap"
+                        />
+                      </div>
+                      <div class="col-12 col-sm-auto">
+                        <input
+                          type="submit"
+                          value="ENVIAR DENÚNCIA"
+                          class="btn-submit w-100"
+                          style="white-space: nowrap"
+                        />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="mt-4 text-center">
+                <p class="mb-3" style="color: #666">
+                  Precisa de ajuda urgente? Entre em contato imediatamente:
+                </p>
+                <div class="row justify-content-center">
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-2">
+                    <a
+                      href="tel:+5581945426288"
+                      class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center"
+                    >
+                      <img
+                        src="img/fone.jpeg"
+                        alt="Telefone"
+                        width="20"
+                        class="me-2"
+                      />
+                      (81) 94542-6288
+                    </a>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-2">
+                    <a
+                      href="https://wa.me/5581945426288"
+                      target="_blank"
+                      class="btn btn-outline-success w-100 d-flex align-items-center justify-content-center"
+                    >
+                      <img
+                        src="img/whats.png"
+                        alt="WhatsApp"
+                        width="20"
+                        class="me-2"
+                      />
+                      WhatsApp
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script>
+        // Script para o controle de range
+        const range = document.getElementById("prejuizo");
+        const output = document.getElementById("valorPrejuizo");
+
+        function atualizarPosicao() {
+          const valor = +range.value;
+          output.textContent = valor;
+
+          const percent = valor / 100;
+          const largura = range.offsetWidth;
+          output.style.left = `${percent * largura}px`;
+        }
+        range.addEventListener("input", atualizarPosicao);
+        window.addEventListener("resize", atualizarPosicao);
+        atualizarPosicao(); // inicial
+      </script>
+    </div>
+  </body>
+</html>

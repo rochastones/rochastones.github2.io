@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Segurança digital para pessoas de 50+</title>
+    <meta
+      name="description"
+      content="Segurança digital: orientações sobre navegação seguraça na internet: treinamento, riscos online e inclusão digital da pessoas de 50+"
+    />
+    <meta
+      name="keywords"
+      content="segurança digital, navegação segura, segurança da informação, pessoa de 50+, consultoria, crimes cibernéticos, cybersecurity, inclusão digital e educação digital."
+    />
+    <meta name="author" content="Severino Rocha da Silva" />
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+      <div class="container">
+        <div class="navbar-brand-custom">
+          <img
+            src="img/logo1.png"
+            alt="CYBERSECURITY PEOPLE 50+"
+            class="navbar-logo"
+          />
+          <h1 class="navbar-title">CYBERSECURITY PEOPLE 50+</h1>
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom"
+                href="javascript:void(0)"
+                onclick="Carregar('home.html')"
+                >HOME</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom"
+                href="javascript:void(0)"
+                onclick="Carregar('sobre.html')"
+                >SOBRE NÓS</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom"
+                href="javascript:void(0)"
+                onclick="Carregar('servicos.html')"
+                >SERVIÇOS</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom"
+                href="javascript:void(0)"
+                onclick="Carregar('informacao.html')"
+                >INFORMAÇÃO</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom"
+                href="javascript:void(0)"
+                onclick="Carregar('crimes.html')"
+                >CRIMES</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom"
+                href="javascript:void(0)"
+                onclick="Carregar('protecao.html')"
+                >PROTEÇÃO</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom"
+                href="javascript:void(0)"
+                onclick="Carregar('form_denuncia.html')"
+                >DENÚNCIA</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom"
+                href="javascript:void(0)"
+                onclick="Carregar('form_contato.html')"
+                >CONTATO</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Área de Conteúdo Dinâmico -->
+    <div id="conteudo" class="container-fluid p-0">
+      <!-- Conteúdo será carregado aqui via AJAX -->
+    </div>
+
+    <!-- Footer Padrão -->
+    <footer class="footer-custom">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="mb-2 mt-md-0">
+              &copy; 2025 - Projeto Cybersecurity People 50+. Todos os direitos
+              reservados.
+            </p>
+            <p class="mb-2 mt-md-0">
+              Curso Tecnico em Desenvolvimento de Sistemas - ETEPD - Recife
+            </p>
+            <p class="mb-2 mt-md-0">Autor: Rocha Silva</p>
+            <div class="social-icons">
+              <a
+                href="https://www.instagram.com/synopsyslife/?hl=en"
+                target="_blank"
+              >
+                <img
+                  src="img/instagram.jpeg"
+                  alt="Instagram"
+                  class="social-icon"
+                />
+              </a>
+              <a href="https://www.facebook.com/Synopsys/" target="_blank">
+                <img src="img/face2.png" alt="Facebook" class="social-icon" />
+              </a>
+              <a href="https://www.youtube.com/user/synopsys" target="_blank">
+                <img src="img/youtube.png" alt="YouTube" class="social-icon" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap JS e Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <!-- jQuery (para compatibilidade com função Carregar) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script type="text/javascript">
+      // Função para carregar conteúdo via AJAX
+      function Carregar(pagina) {
+        $("#conteudo").load(pagina);
+      }
+
+      // Carrega a página inicial ao abrir o site
+      $(document).ready(function () {
+        Carregar("home.html");
+
+        // Adiciona classe ativa ao link de navegação atual
+        $(".nav-link-custom").click(function () {
+          $(".nav-link-custom").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

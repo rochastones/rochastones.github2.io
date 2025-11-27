@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crimes Cibernéticos</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <!-- Hero Section -->
+      <section class="form-hero">
+        <div class="container">
+          <h1>Fale com um de nossos especialistas</h1>
+          <p>
+            Estamos aqui para tirar suas dúvidas e oferecer orientação
+            personalizada sobre segurança digital
+          </p>
+        </div>
+      </section>
+
+      <!-- Form Section -->
+      <section class="form-section">
+        <!--Mensagem de sucesso após envio dos dados -->
+        <div
+          id="mensagemSucesso"
+          style="
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #c3e6cb;
+          "
+        >
+          <strong>✓ Sucesso!</strong> Mensagem enviada com sucesso! Entraremos
+          em contato em breve.
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+              <div class="form-container">
+                <div class="form-header">
+                  <h2>Formulário de contato</h2>
+                </div>
+                <div class="form-body">
+                  <form action="processa_contato.php" method="post">
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label for="nome" class="form-label"
+                          >Nome completo *</label
+                        >
+                        <input
+                          type="text"
+                          id="nome"
+                          name="nome"
+                          class="form-control form-control-custom"
+                          required
+                          maxlength="50"
+                          placeholder="Seu nome completo"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="telefone" class="form-label"
+                          >Telefone *</label
+                        >
+                        <input
+                          type="text"
+                          id="telefone"
+                          name="telefone"
+                          class="form-control form-control-custom"
+                          required
+                          placeholder="(00) 00000-0000"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email *</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-control form-control-custom"
+                        required
+                        placeholder="seu.email@exemplo.com"
+                      />
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="servico" class="form-label"
+                        >Serviço digital utilizado</label
+                      >
+                      <select
+                        name="servico"
+                        id="servico"
+                        class="form-control form-control-custom"
+                        required
+                      >
+                        <option value="">Selecione o serviço...</option>
+                        <option value="whatsApp">WhatsApp</option>
+                        <option value="Telegran">Telegram</option>
+                        <option value="Email">Email</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Aplicativo de banco">
+                          Aplicativo de banco
+                        </option>
+                        <option value="Outros">Outros</option>
+                      </select>
+                    </div>
+
+                    <div class="mb-4">
+                      <label class="form-label"
+                        >Tipo de problema enfrentado</label
+                      >
+                      <div class="radio-group">
+                        <div class="radio-item">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            id="dados"
+                            name="opcao"
+                            value="dados"
+                          />
+                          <label class="form-check-label" for="dados"
+                            >Roubo de dados</label
+                          >
+                        </div>
+                        <div class="radio-item">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            id="plagio"
+                            name="opcao"
+                            value="plagio"
+                          />
+                          <label class="form-check-label" for="plagio"
+                            >Plágio</label
+                          >
+                        </div>
+                        <div class="radio-item">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            id="financeiro"
+                            name="opcao"
+                            value="financeiro"
+                          />
+                          <label class="form-check-label" for="financeiro"
+                            >Subtração de valores</label
+                          >
+                        </div>
+                        <div class="radio-item">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            id="identidade"
+                            name="opcao"
+                            value="identidade"
+                          />
+                          <label class="form-check-label" for="identidade"
+                            >Roubo de identidade</label
+                          >
+                        </div>
+                        <div class="radio-item">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            id="chantagem"
+                            name="opcao"
+                            value="chantagem"
+                          />
+                          <label class="form-check-label" for="chantagem"
+                            >Chantagem</label
+                          >
+                        </div>
+                        <div class="radio-item">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            id="fake"
+                            name="opcao"
+                            value="fake"
+                          />
+                          <label class="form-check-label" for="fake"
+                            >Deepfake</label
+                          >
+                        </div>
+                        <div class="radio-item">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            id="fakeNews"
+                            name="opcao"
+                            value="fake News"
+                          />
+                          <label class="form-check-label" for="fakeNews"
+                            >Fake news</label
+                          >
+                        </div>
+                        <div class="radio-item">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            id="boolen"
+                            name="opcao"
+                            value="boolen"
+                          />
+                          <label class="form-check-label" for="boolen"
+                            >Cyber bullying</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mb-4">
+                      <label for="mensagem" class="form-label"
+                        >Mensagem *</label
+                      >
+                      <textarea
+                        name="comentarios"
+                        id="mensagem"
+                        rows="5"
+                        class="form-control form-control-custom"
+                        required
+                        placeholder="Descreva sua dúvida ou problema com detalhes..."
+                      ></textarea>
+                    </div>
+                    <div class="row justify-content-end">
+                      <div class="col-12 col-sm-auto mb-2 mb-sm-0">
+                        <input
+                          type="reset"
+                          value="LIMPAR FORMULÁRIO"
+                          class="btn-reset w-100"
+                          style="white-space: nowrap"
+                        />
+                      </div>
+                      <div class="col-12 col-sm-auto">
+                        <input
+                          type="submit"
+                          value="ENVIAR MENSAGEM"
+                          class="btn-submit w-100"
+                          style="white-space: nowrap"
+                        />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="contact-info-sidebar">
+                <h3 class="mb-4" style="color: var(--primary-color)">
+                  Outras formas de contato
+                </h3>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <img src="img/fone.jpeg" alt="Telefone" />
+                  </div>
+                  <div class="contact-text">
+                    <strong>Telefone</strong>
+                    <span>(81) 94542-6288</span>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <img src="img/email.png" alt="Email" />
+                  </div>
+                  <div class="contact-text">
+                    <strong>Email</strong>
+                    <span>cybersecurity@people50+.com.br</span>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <img src="img/whats.png" alt="WhatsApp" />
+                  </div>
+                  <div class="contact-text">
+                    <strong>WhatsApp</strong>
+                    <span>(81) 94542-6288</span>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <img src="img/localiza.png" alt="Localização" />
+                  </div>
+                  <div class="contact-text">
+                    <strong>Endereço</strong>
+                    <span>Av Boa Viagem 234, Recife - PE, Brasil</span>
+                  </div>
+                </div>
+
+                <div
+                  class="mt-4 p-3"
+                  style="background: #e8f4fc; border-radius: 8px"
+                >
+                  <h5 style="color: var(--primary-color); margin-bottom: 10px">
+                    Horário de atendimento
+                  </h5>
+                  <p class="mb-1">
+                    <strong>Segunda a Sexta:</strong> 8h às 18h
+                  </p>
+                  <p class="mb-0"><strong>Sábado:</strong> 8h às 12h</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      // Verifica se veio de um envio bem-sucedido
+      document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+
+        if (urlParams.get("sucesso") === "1") {
+          // Mostra mensagem de sucesso
+          alert(
+            "Mensagem enviada com sucesso! Entraremos em contato em breve."
+          );
+
+          // Limpa o formulário (opcional)
+          document.querySelector("form").reset();
+
+          // Remove o parâmetro da URL sem recarregar
+          window.history.replaceState(
+            {},
+            document.title,
+            window.location.pathname
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
